@@ -74,7 +74,7 @@ const Test = () => (
 /* here reactEle is normal js variable */
 root.render(<Test />)
 
-// we can put react element inside raect element, react component inside component, 
+// we can put react element inside react element, react component inside react component, 
 // react element inside react component, react component inside react element
 
 // const apiData = api.getData();
@@ -85,7 +85,9 @@ root.render(<Test />)
 //         <h1>React</h1>
 //     </div>
 // );
-// if api data get attacked gives some mallicious data jsx skips that it will not print
+// if api data get attacked and gives some mallicious data jsx skips that it will not print
+// When JSX prevents malicious data from being executed in the console or the UI, it is called "Escaping" 
+// or "XSS (Cross-Site Scripting) Protection".
 
 // {Test()} == <Test></Test> == <Test />
 
