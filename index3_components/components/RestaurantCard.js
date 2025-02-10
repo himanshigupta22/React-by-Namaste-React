@@ -1,3 +1,5 @@
+import { CDN_LINK } from "../utils/constants";
+
 // const RestaurantCard = (props) => {
 //     const {resName, cuisine} = props;
 //     return (
@@ -8,21 +10,19 @@
 //       </div>
 //     )
 // }
-
-import { CDN_LINK } from "../utils/constants";
-
 const styleCard = {
     backgroundColor: "bisque"
 }
 
 const RestaurantCard = (props) => {
     const {resData} = props;
-    const {name, cuisines, cloudinaryImageId} = resData?.info;
+    const {name, cuisines, cloudinaryImageId, avgRatingString} = resData?.info;
     return (
       <div className="res-card" style={styleCard}>
         <img className="food" src={CDN_LINK + cloudinaryImageId}/>
         <h3>{name}</h3>
         <h4>{cuisines[0]}</h4>
+        <h4>{avgRatingString}</h4>
       </div>
     )
 }
