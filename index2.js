@@ -10,7 +10,10 @@ const heading = React.createElement(
 );
 console.log(heading);
 
+// JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code inside JavaScript. 
+// JSX makes it easier to create React components by combining UI and logic in a single file.
 // JSX (This is not a html, it is html or xml like syntax jsx)
+// JSX allows embedding HTML like syntax in JavaScript.
 // JSX => babel transpiles it to React.createElement 
 const jsxheading = <h1 className="head" id="heading" tabIndex="1">This is JSX heading</h1> // this is transpiled before it reaches to JS engine 
 console.log(jsxheading);                                     // done by parcel, parcel handed to babel package
@@ -51,6 +54,8 @@ const ReactComp = () => (
 
 
 // Component Composition
+// Component composition in React refers to the practice of combining smaller, reusable components to 
+// build more complex UI structures.
 const ComponentComposition = function () {
     return (
     <div>
@@ -59,6 +64,7 @@ const ComponentComposition = function () {
     </div>
 )};
 
+// Embedding JavaScript inside JSX
 // we can inject js code({}) inside jsx
 const num = 1000;
 const Test = () => (
@@ -90,4 +96,7 @@ root.render(<Test />)
 // or "XSS (Cross-Site Scripting) Protection".
 
 // {Test()} == <Test></Test> == <Test />
+
+
+// React Elements are the smallest UI units, while React Components are reusable functions that return JSX.
 
